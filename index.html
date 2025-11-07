@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - Lucid Digital Creatives</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p style="text-align:center; color:#555; margin-bottom:1.5rem;">
+         Techie Gigs Nigeria <strong>Is glad to have you here</strong>
+        </p>
+
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g., John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="e.g., john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="jobRole">Job Role</label>
+                <input type="text" id="jobRole" name="jobRole" required placeholder="e.g., Frontend Developer">
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <div id="output" class="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
