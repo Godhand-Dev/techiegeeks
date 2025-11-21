@@ -1,3 +1,14 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --accent: #ec4899;
+    --success: #10b981;
+    --gray-100: #f8fafc;
+    --gray-200: #e2e8f0;
+    --gray-600: #475569;
+    --gray-900: #0f172a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,94 +16,323 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f3443 0%, #134e5e 50%, #0f6674 100%);
     min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: var(--gray-900);
+}
+
+/* ====================== HEADER ====================== */
+.site-header {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    object-fit: cover;
+}
+
+.profile-name h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.profile-name p {
+    font-size: 0.95rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Centered Social Icons */
+.social-links-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 280px;
+}
+
+.connect-text {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.social-icons a {
+    color: #444;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-4px) scale(1.1);
+}
+
+.other-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.other-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.other-links a:hover {
+    color: var(--primary);
+}
+
+/* ====================== MAIN CARD ====================== */
 .container {
     background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 480px;
+    max-width: 500px;
+    width: 95%;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
     text-align: center;
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-size: 1.8rem;
+    padding: 3rem 2rem 2rem;
+}
+
+.ebook-cover {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 1.9rem;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 700;
+}
+
+.header p {
+    opacity: 0.95;
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.form-section {
+    padding: 2.5rem 2rem;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #444;
+    color: var(--gray-900);
 }
 
 input {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
     font-size: 1rem;
-    transition: border 0.3s ease;
+    transition: all 0.3s;
 }
 
 input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
 
 button {
     width: 100%;
-    padding: 0.85rem;
-    background-color: #667eea;
+    padding: 1rem;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    position: relative;
+    transition: transform 0.2s;
 }
 
 button:hover {
-    background-color: #5a6fd8;
+    transform: translateY(-2px);
 }
 
-.output {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #f0f4f8;
-    border-radius: 6px;
-    border-left: 4px solid #667eea;
+.btn-loading { display: none; }
+button.loading .btn-text { display: none; }
+button.loading .btn-loading { display: inline; }
+
+.privacy {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+/* ====================== SUCCESS MODAL ====================== */
+.modal {
     display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-.output.show {
-    display: block;
+.modal.show {
+    display: flex;
 }
 
-.output h3 {
-    margin-bottom: 0.5rem;
-    color: #333;
+.modal-content {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.5s ease-out;
 }
 
-.output p {
-    margin: 0.3rem 0;
-    color: #555;
+.success-icon {
+    font-size: 4.5rem;
+    color: var(--success);
+    margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--gray-900);
+}
+
+.modal-content p {
+    margin: 0.6rem 0;
+    color: var(--gray-900);
+    line-height: 1.5;
+}
+
+.modal-btn {
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+    .social-links-centered { order: 3; margin-top: 0.5rem; }
+    .ebook-cover { width: 150px; height: 200px; }
+}
+
+/* ====================== TELEGRAM BUTTON ====================== */
+.telegram-wrapper {
+    margin-top: 1.8rem;
+    text-align: center;
+}
+
+.telegram-text {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 1rem;
+}
+
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    background: #0088cc;
+    color: white !important;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+    transition: all 0.3s ease;
+}
+
+.telegram-btn:hover {
+    background: #0077b5;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 136, 204, 0.4);
+}
+
+.telegram-btn i {
+    font-size: 1.4rem;
 }

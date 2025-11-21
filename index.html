@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application - Lucid Digital Creatives</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Get Your Free E-Book | The Ultimate Web Development Handbook 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    <!-- Professional Sticky Header -->
+    <header class="site-header">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Temitope Oladokun">
+            </div>
+            <div class="profile-name">
+                <h2>Temitope Oladokun</h2>
+                <p>Product Manager</p>
+            </div>
+        </div>
+
+        <!-- Centered Social Media Icons -->
+        <div class="social-links-centered">
+            <span class="connect-text">Connect with me via</span>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/temitopeoladokun/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/share/1DaXUoUurP/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/search?q=Techie991&t=1762873908249/" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/techiegeeks_ng?igsh=c24xaHdxYWhkemtk/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Email & Portfolio (Right Side) -->
+        <div class="other-links">
+            <a href="mailto:temitopeo49@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="#" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Main E-Book Card -->
     <div class="container">
-        <h1>Welcome</h1>
-        <p style="text-align:center; color:#555; margin-bottom:1.5rem;">
-         Techie Gigs Nigeria <strong>Is glad to have you here</strong>
-        </p>
+        <div class="header">
+            <img src="INTENTIONAL PARENTING MOCKUP 7.png " alt="E-Book Cover" class="ebook-cover" />
+            <h1>Claim Your Free E-Book Now</h1>
+            <p>The Ultimate Web Development Handbook 2026<br><strong>100% Free – Instant Access</strong></p>
+        </div>
 
-        <form id="userForm">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="e.g., John Doe">
-            </div>
+        <div class="form-section">
+            <form id="ebookForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" />
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="e.g., john@example.com">
-            </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com" />
+                </div>
 
-            <div class="form-group">
-                <label for="jobRole">Job Role</label>
-                <input type="text" id="jobRole" name="jobRole" required placeholder="e.g., Frontend Developer">
-            </div>
+                <!-- Job Role Field -->
+                <div class="form-group">
+                    <label for="jobRole">Job Role / Profession</label>
+                    <input type="text" id="jobRole" name="jobRole" required placeholder="e.g. Product Manager, Developer, Student..." />
+                </div>
 
-            <button type="submit">Submit Application</button>
-        </form>
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Download Free E-Book Instantly</span>
+                    <span class="btn-loading">Sending...</span>
+                </button>
+<!-- NEW: Telegram Button -->
+<div class="telegram-wrapper">
+    <p class="telegram-text">For Daily Job Updates</p>
+    <a href="https://t.me/job_alchemist" target="_blank" class="telegram-btn">
+        <i class="fab fa-telegram-plane"></i> Click Here to Join Telegram Channel
+    </a>
+</div>
 
-        <div id="output" class="output"></div>
+<p class="privacy">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal (Centered Pop-up) -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>Congratulations!</h3>
+            <p>Thank you, <strong id="userName">Name</strong>!</p>
+            <p>Your free e-book has been sent to<br><strong id="userEmail">email</strong></p>
+            <button id="anotherSubmit" class="modal-btn">Submit Another Form</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
