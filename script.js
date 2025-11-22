@@ -6,7 +6,7 @@ const anotherBtn = document.getElementById('anotherSubmit');
 const submitBtn = document.getElementById('submitBtn');
 
 // Replace with your real endpoint
-const YOUR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyY0gcfKXHViqSxEW4kgm6uiDLv7vaySKlP4C8S3nJEyO-FRrmEQh4kVB-f7kYjRQkFpw/exec';
+const YOUR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxf6upQuvIV8v12KOil2RUzIFrJ9WXh6WlGHNa1s_DOhEH_cw5qSA_EKZg4JkNo0tRgCQ/exec';
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -45,4 +45,5 @@ form.addEventListener('submit', function(e) {
 anotherBtn.addEventListener('click', () => {
     modal.classList.remove('show');
     form.reset();
+
 });
